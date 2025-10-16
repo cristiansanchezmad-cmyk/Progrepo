@@ -10,7 +10,6 @@ public class Raton {
         int altura = 0;
         int peso = 0;
         final int altmin = 140;
-        boolean estado = true;
         System.out.println("BIENVENIDO AL RATÓN JUGUETÓN");
         System.out.println("Introduce tu altura en cm");
         altura = teclado.nextInt();
