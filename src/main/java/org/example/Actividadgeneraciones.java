@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Actividadgeneraciones {
     static void main() {
         Scanner telcado = new Scanner(System.in);
-        boolean seguir = true;
         final int ANYO_MINIMO = 1900;
         int modo = 0;
         int anyo_actual = 0;
@@ -20,10 +19,10 @@ public class Actividadgeneraciones {
             modo = telcado.nextInt();
         } else {
             System.out.println("El valor del modo incorrecto");
-            seguir = false;
         }
-        if (seguir) {
-            if (modo == 1) {
+        switch (modo) {
+            case 1:
+
                 System.out.println("Introduce tu año de nacimiento:");
                 String anyo_nacimiento = telcado.next();
 
@@ -31,30 +30,30 @@ public class Actividadgeneraciones {
                     anyo_nacimiento_int = Integer.parseInt((anyo_nacimiento));
                 } catch (NumberFormatException e) {
                     System.out.println("El formato no es numérico.");
-                    return;
                 }
                 LocalDateTime fecha = LocalDateTime.now();
                 anyo_actual = fecha.getYear();
-
-            } else if (modo == 2) {
+                break;
+            case 2:
                 int edad = 0;
 
                 if (telcado.hasNextInt()) {
                     edad = telcado.nextInt();
                 } else {
                     System.out.println("La edad no tiene formato correcto (numérico)");
-                    return;
+
                 }
                 if (edad >= 0) {
                     anyo_nacimiento_int = (anyo_actual - edad);
                 } else {
                     System.out.println("La edad no es corrrecta.");
                 }
-            } else {
+            default:
                 System.out.println("El modo introducidp no es correcto");
-                return;
-            }
-            if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual) {
+
+
+        }
+        if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual) {
 
                 if (anyo_nacimiento_int <= 1927) {
                     System.out.println("Generación sin bautizar");
@@ -72,7 +71,9 @@ public class Actividadgeneraciones {
             }
         }
     }
-}
+
+
+
 
 
 
