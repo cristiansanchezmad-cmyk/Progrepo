@@ -15,10 +15,16 @@ public class Comprobador_ISBN {
             case "1":
             System.out.println("Introduce tu ISBN...");
             String isbn = teclado.nextLine();
-            if (isbn.length()==10-1){
-                for (int i = 0; i <isbn.length() ; i++) {
+        int tamanyo =isbn.length();
+                int numfin = isbn.charAt(9);
+            if (tamanyo==10-1) {
+                for (int i = 0; i < isbn.length(); i++) {
 
-                }                /*for (int i = 0; i < isbn.length(); i++) {
+                }
+
+            /* }else if (numfin="X"){
+
+                              for (int i = 0; i < isbn.length(); i++) {
                     if (i == isbn.length() - 1 && isbn.substring(i).equals("X")) {
                         int numfin = 10;
                         op1 += numfin * op2;
