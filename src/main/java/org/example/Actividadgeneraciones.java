@@ -30,6 +30,7 @@ public class Actividadgeneraciones {
                     anyo_nacimiento_int = Integer.parseInt((anyo_nacimiento));
                 } catch (NumberFormatException e) {
                     System.out.println("El formato no es numérico.");
+
                 }
                 LocalDateTime fecha = LocalDateTime.now();
                 anyo_actual = fecha.getYear();
