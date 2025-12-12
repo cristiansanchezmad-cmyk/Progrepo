@@ -1,9 +1,11 @@
 
 import java.util.Scanner;
+static Scanner teclado = new Scanner(System.in);
 
  void main(){
-    Scanner teclado = new Scanner(System.in);
-
+     int [] hola = new int[6];
+     meter(hola);
+     System.out.println(Arrays.toString(meter(hola)));
     int[] dientesup = new int[6];
     int[] dientesbajo = new int[6];
     int cont = 0;
@@ -16,6 +18,7 @@ import java.util.Scanner;
         System.out.println("Entrada inválida, se requiere un número entero");
         return;
     }
+
 do {
 
 
@@ -77,6 +80,14 @@ do {
 
 
 
+}
+
+public static int[] meter (int num[]){
+    System.out.println("Introduce Hilera");
+    for (int i = 0; i < num.length; i++) {
+        num[i] = teclado.nextInt();
+    }
+     return num;
 }
 
 
