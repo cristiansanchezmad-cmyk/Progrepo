@@ -95,8 +95,7 @@ public class Abuela {
      * @param =  comprobante -es el resultado entre la suma de las dos primeras posiciones, si las siguientes dan el mismo numero que esta devolverá true,sino devolerá false
      * @param =  arriba - es el primer vector que se ha introducido, correspondería a los dientes de arriba
      * @param =  abajo - es el segundo vector que se ha introducido, correspondería a los dientes de abajo
-     * @param = correcto - es un booleano que va a seguir preguntando si da error
-     * @return - devuelve un vector que tienes los valores que el programa quiere
+     * @return - devuelve un vector que tiene los dientes comparados
      */
     public static boolean encajan(int[] arriba, int[] abajo) {
         int comprobante = arriba[0] + abajo[0];
